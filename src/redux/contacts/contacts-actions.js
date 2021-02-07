@@ -1,6 +1,10 @@
-// import axios from 'axios';
 import { createAction } from '@reduxjs/toolkit';
-// import { addContact } from '../services/contact-api';
+
+export const fetchContactRequest = createAction('contacts/fetchContactRequest');
+export const fetchContactSuccess = createAction(
+  'contacts/fetchContactSuccsess',
+);
+export const fetchContactError = createAction('contacts/fetchContactError');
 
 export const addContactRequest = createAction('contacts/addContactRequest');
 export const addContactSuccess = createAction('contacts/addContactSuccsess');
@@ -14,12 +18,4 @@ export const deleteContactSuccess = createAction(
 );
 export const deleteContactError = createAction('contacts/deleteContactError');
 
-export const fetchContactRequest = createAction('contacts/fetchContactRequest');
-export const fetchContactSuccess = createAction(
-  'contacts/fetchContactSuccsess',
-);
-export const fetchContactError = createAction('contacts/fetchContactError');
-
 export const changeFilter = createAction('contacts/changeFilter');
-
-// eslint-disable-next-line import/no-anonymous-default-export

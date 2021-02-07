@@ -1,6 +1,6 @@
 import { useSelector, useDispatch } from 'react-redux';
-import * as operations from '../../redux/operations';
-import { getVisibleContacts } from '../../redux/selectors';
+import * as operations from '../../redux/contacts/contacts-operations';
+import { getVisibleContacts } from '../../redux/contacts/contacts-selectors';
 
 export default function ContactList() {
   const contacts = useSelector(getVisibleContacts);

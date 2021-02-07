@@ -17,8 +17,7 @@ const styles = {
 const HomeView = () => (
   <div style={styles.container}>
     <h1 style={styles.title}>
-      <p>Welcome to Global Phonebook!</p>
-      <p>The best way to save your phone contacts!</p>
+      <p>Welcome to our Phonebook!</p>
     </h1>
   </div>
 );

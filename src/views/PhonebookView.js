@@ -1,18 +1,23 @@
-import ContactList from '../components/ContactList';
+import { useEffect } from 'react';
+import { useDispatch } from 'react-redux';
+
+import ContactList from '../components/ContactList/ContactList';
 import Form from '../components/Form/Form';
-import Filter from '../components/Filter';
-import Container from '../components/Container';
+import Filter from '../components/Filter/Filter';
+
+import { contactsOperations } from '../redux/contacts';
 
 export default function PhonebookView() {
+  const dispatch = useDispatch();
+  useEffect(() => dispatch(contactsOperations.fetchContacts()), [dispatch]);
+
   return (
-    <Container>
-      <h1 className="title"> Phonebook </h1>
-      <h2 className="subtitle">Add new contact</h2>
+    <div>
+      <h1>Phonebook</h1>
       <Form />
-      <h2 className="subtitle">Find contact</h2>
+      <h2>Contacts</h2>
       <Filter />
-      <h2 className="subtitle">Contact list</h2>
       <ContactList />
-    </Container>
+    </div>
   );
 }

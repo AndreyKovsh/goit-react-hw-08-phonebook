@@ -10,6 +10,7 @@ import { authOperations, authSelectors } from './redux/auth';
 import { Switch } from 'react-router-dom';
 import PrivatRoute from './components/PrivatRoute';
 import PublicRoute from './components/PublicRoute';
+import { ToastContainer } from 'react-toastify';
 
 import './App.css';
 

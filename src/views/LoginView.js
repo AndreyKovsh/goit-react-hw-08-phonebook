@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { useDispatch } from 'react-redux';
-import authOperations from '../redux/auth/auth-operations';
+import { authOperations } from '../redux/auth';
 
 const styles = {
   form: {
@@ -51,7 +51,7 @@ export default function LoginView() {
     <div style={styles.section}>
       <h1>Log in</h1>
 
-      <form onSubmit={handleSubmit} style={styles.form} autoComplete="on">
+      <form onSubmit={handleSubmit} style={styles.form} autoComplete="off">
         <label style={styles.label}>
           E-mail
           <input
